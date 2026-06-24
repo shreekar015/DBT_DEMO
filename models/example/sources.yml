@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: demo                  # The internal dbt handle for the source
+    database: demo         # Explicit Snowflake database name
+    schema: demo_schema                 # Explicit Snowflake schema name
+    tables:
+      - name: bike               # The exact Snowflake table name
+      - name: weather               # The exact Snowflake table name
+        
+      #   tests:                     # Optional data quality checks
+      #     - unique
+      #     - not_null
+      # - name: customers
+      #   description: "Customer profile records"
